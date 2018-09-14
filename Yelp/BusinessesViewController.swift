@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusinessesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BusinessesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -52,7 +52,17 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
                  }
          }
          */
+        //search bar in Nav bar function
+        createSearchBar()
+    }
+    
+    func createSearchBar(){
+        let searchBar = UISearchBar()
+        searchBar.showsCancelButton = false
+        searchBar.placeholder = "Enter your search Here!"
+        searchBar.delegate = self
         
+        self.navigationItem.titleView = searchBar
     }
     
     
