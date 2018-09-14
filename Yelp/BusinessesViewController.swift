@@ -23,6 +23,7 @@ class BusinessesViewController: UIViewController, UITableViewDelegate, UITableVi
         //tableView.rowHeight = 150
         tableView.rowHeight = UITableViewAutomaticDimension
         
+        
         Business.searchWithTerm(term: "Thai", completion: { (businesses: [Business]?, error: Error?) -> Void in
             
                 self.businesses = businesses
